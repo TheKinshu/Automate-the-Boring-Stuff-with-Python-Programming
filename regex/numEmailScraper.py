@@ -4,22 +4,22 @@
 
 import re, pyperclip
 
-# Create a Rregex for phone numbers
+# Create a Regex for phone numbers
 phoneRegex = re.compile(r'''
-                        (((\d\d\d)|(\(\d\d\d\)))?  # Area code (optional)
+                        (((\d\d\d)|(\(\d\d\d\)))?  # Area code (optional) 000
                         (\s|-)                     # First separator (If area code is not available look for whitespace or dash)
-                        \d\d\d                     # First 3 digit
+                        \d\d\d                     # First 3 digit        000
                         -                          # Second separator
-                        \d\d\d\d                   # Last 4 digit
+                        \d\d\d\d                   # Last 4 digit         0000
                         (((ext(\.)?\s) | x)        # Extension word/character (optional: This check if the extension is using 'ext' or 'x')
-                        (\d{2,5}))?)                # Extension numbers (optional: check if theres 2 or more character)
+                        (\d{2,5}))?)               # Extension numbers (optional: check if theres 2 or more character)
                         ''', re.VERBOSE)
 
 # Create a Rregex for email address
 emailRegex = re.compile(r'''
-                         [a-zA=Z0-9_.+]+           # Email name
+                         [a-zA-Z0-9_.+]+           # Email name
                          @                         # @ symbol
-                         [a-zA=Z0-9_.+]+           # Domain name
+                         [a-zA-Z0-9_.+]+           # Domain name
                          ''', re.VERBOSE)
 
 # Get the text off the clipboard

@@ -1,0 +1,1 @@
+@py E:\Study\AutomateCourse\WebScraping\webMod.py %*
