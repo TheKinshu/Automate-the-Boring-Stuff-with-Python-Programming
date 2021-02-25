@@ -1,13 +1,14 @@
 import smtplib # simple mail transfer protocal library
 
 # Information for domain server
-# Provider                  SMTP server Domain Name
-# Gmail                     smtp.gmail.com
-# Outlook.com/hotmail.com   smtp.mail.outlook.com
-# Yahoo Mail                smtp.mail.yahoo.com
-# AT&T                      smtp.mail.att.net (Port 465)
-# Comcast                   smtp.comcast.net
-# Verizon                   smtp.verizon.net (Port 465)
+# Provider                  |SMTP server Domain Name
+#---------------------------|-------------------------------
+# Gmail                     |smtp.gmail.com
+# Outlook.com/hotmail.com   |smtp.mail.outlook.com
+# Yahoo Mail                |smtp.mail.yahoo.com
+# AT&T                      |smtp.mail.att.net (Port 465)
+# Comcast                   |smtp.comcast.net
+# Verizon                   |smtp.verizon.net (Port 465)
 
 conn = smtplib.SMTP('smtp.gmail.com', 587)
 
